@@ -3,14 +3,14 @@
 
 {
   "name": "${environmentName}",
-  "description": "Nextcloud",
-  "version": "3.0.0",
-  "author": "https://github.com/lbthomsen",
+  "description": "SmartClient with BaseX",
+  "version": "1.0.0",
+  "author": "https://github.com/bigale",
   "ssh-key": "lth",
   "containers": [
     {
       "hostname": "${webContainerName}",
-      "template": "debian-stretch",
+      "template": "oraclejdk8",
       "peer-criteria": "HTTP-GROUP",
       "size": "${containerSize}",
       "port-mapping": [
@@ -29,7 +29,7 @@
     }
   ],
   "ansible-configuration": {
-    "source-url": "https://github.com/subutai-blueprints/subutai-blueprint-nextcloud/archive/master.zip",
+    "source-url": "https://github.com/bigale/subutai-blueprint-smartclient-basex/archive/master.zip",
     "ansible-playbook": "site.yml",
     "extra-vars": [
       {
